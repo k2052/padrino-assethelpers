@@ -4,13 +4,13 @@ module Padrino
       URI_REGEXP = %r(^[a-z]+://|^/)
 
       def stylesheet(*sources)
-        stylesheet_link_tag(sources)
+        stylesheet_link_tag(*sources)
       end
       alias_method :stylesheets, :stylesheet  
       alias_method :css, :stylesheet
 
       def javascript(*sources)
-        javascript_link_tag(sources)
+        javascript_include_tag(*sources)
       end
       alias_method :javascripts, :javascript
       alias_method :js,          :javascript
